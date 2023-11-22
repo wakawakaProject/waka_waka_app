@@ -15,6 +15,6 @@ import com.example.waka_waka.ui.theme.Waka_wakaTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        println("ㅎㅇ")
     }
 }
