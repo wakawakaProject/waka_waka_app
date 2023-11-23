@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(binding.root)
-        binding.edit1
 
     }
 }
