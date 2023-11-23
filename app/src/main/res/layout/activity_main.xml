@@ -14,6 +14,9 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="@android:dimen/thumbnail_height"
             android:src="@drawable/main_logo_white"></ImageView>
+
+        <include layout="@layout/toolbar" />
     </LinearLayout>
+
 
 </LinearLayout>

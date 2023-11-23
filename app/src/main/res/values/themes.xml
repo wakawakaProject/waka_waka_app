@@ -2,4 +2,5 @@
 <resources>
 
     <style name="Theme.Waka_waka" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Appcompat" parent="Theme.AppCompat.NoActionBar"/>
 </resources>
