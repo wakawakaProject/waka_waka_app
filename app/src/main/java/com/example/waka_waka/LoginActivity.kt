@@ -1,5 +1,6 @@
 package com.example.waka_waka
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,11 @@ class LoginActivity : AppCompatActivity() {
 
         val binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
-        setContentView(binding.root)
+        setContentView(view)
 
+        binding.signUp.setOnClickListener{
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
