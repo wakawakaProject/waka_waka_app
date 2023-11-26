@@ -16,25 +16,20 @@ class SignUpActivity : AppCompatActivity() {
         val binding = ActivitySignUpBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        val intent = Intent(this, LoginActivity::class.java)
 
-
-        binding.signUpComplete.setOnClickListener{
-            if(binding.SignUpPWD != binding.SignUpPWDCheck) {
+        binding.signUpComplete.setOnClickListener {
+            if (binding.SignUpPWD.text.toString() == binding.SignUpPWDCheck.text.toString()) {
+                checkcomplete = true
+            } else {
                 Toast.makeText(applicationContext, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
                 binding.SignUpPWD.text = null
                 binding.SignUpPWDCheck.text = null
                 checkcomplete = false
             }
-            else{
-                checkcomplete = true
-            }
-            if (checkcomplete == true){
-                val intent = Intent(this, LoginActivity::class.java)
+            if (checkcomplete) {
                 startActivity(intent)
             }
-
         }
-
-
     }
 }
