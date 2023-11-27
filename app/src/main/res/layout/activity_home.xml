@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     android:background="@color/black">
 
-        <ImageView
-            android:layout_width="187dp"
-            android:layout_height="92dp"
-            android:layout_marginLeft="110dp"
-            android:src="@drawable/main_logo_white">
-        </ImageView>
+    <ImageView
+        android:layout_width="187dp"
+        android:layout_height="79dp"
+        android:layout_marginLeft="110dp"
+        android:src="@drawable/main_logo_white"></ImageView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="343dp"
-        android:layout_height="251dp"
+        android:layout_height="161dp"
         android:layout_marginLeft="37dp"
         app:cardBackgroundColor="@color/card_navy"
         app:cardCornerRadius="18dp">
@@ -23,22 +22,85 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/lineseedkr_bd"
             android:text="평점"
             android:textColor="@color/white"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="45dp"
-            android:textSize="20dp">
-        </TextView>
+            android:textSize="20dp"></TextView>
 
         <ImageView
             android:layout_width="117dp"
             android:layout_height="133dp"
-            android:src="@drawable/proto_type"
             android:layout_marginLeft="110dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/proto_type"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="245dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lineseedkr_bd"
+            android:text="포지션"
+            android:textColor="@color/white"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/lineseedkr_bd"
+            android:text="이름"
+            android:textColor="@color/white"
+            android:textSize="20dp"></TextView>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/match_making"
+        android:layout_width="343dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/lineseedkr_bd"
+        android:text="매치 만들기"
+        android:textColor="@color/white"
+        android:textSize="25dp"></Button>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="343dp"
+        android:layout_height="134dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/card_navy"
+        app:cardCornerRadius="18dp"></androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="343dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/card_navy"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="18dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="매치 현황 보기"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lineseedkr_bd"
+            android:textSize="24dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="10dp">
-        </ImageView>
+        </TextView>
 
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="317dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="18dp"
+            android:layout_marginLeft="15dp">
+        </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
