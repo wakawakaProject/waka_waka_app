@@ -1,20 +1,28 @@
 package com.example.waka_waka
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.waka_waka.ui.theme.Waka_wakaTheme
+import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+import com.example.waka_waka.databinding.ActivityMainBinding
+
+
+class MainActivity : AppCompatActivity() {
+
+    private val waitTimeMillis: Long = 2000    //기다리는 시간 2초 선언
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        println("ㅎㅇ")
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+
+        setContentView(view)
+
+        Handler().postDelayed({
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }, waitTimeMillis)
+
     }
 }
