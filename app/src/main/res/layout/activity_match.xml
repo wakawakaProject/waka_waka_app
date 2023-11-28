@@ -84,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="5dp"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:text="12월 23일 (토) 오후 9시 매치"
                         android:fontFamily="@font/lineseedkr_bd"
                         app:layout_constraintTop_toBottomOf="@+id/cv_img"/>
@@ -96,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="5dp"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:text="경기도 시흥시 정왕동 HM풋살파크 C구장"
                         app:layout_constraintTop_toBottomOf="@+id/tv_match_title"/>
 
@@ -105,7 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
-                        android:textSize="12dp"
+                        android:textSize="12sp"
                         android:text="안녕하세요! 12월 24일 경기예정입니다. 많은 관심 부탁드려요!!"
                         app:layout_constraintTop_toBottomOf="@+id/tv_match_addrs"/>
 
@@ -117,7 +117,7 @@
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/round_button"
                         android:text="매치 참여하기 7/12"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/lineseedkr_bd"
                         app:layout_constraintTop_toBottomOf="@id/tv_match_info"/>
@@ -130,7 +130,7 @@
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/round_button"
                         android:text="라인업 확인하기"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/lineseedkr_bd"
                         app:layout_constraintTop_toBottomOf="@id/btn_join_match"/>
