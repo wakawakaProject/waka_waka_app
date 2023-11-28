@@ -4,14 +4,31 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/navi_main"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/menu_toolbar"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabTextColor="@color/white"
+        app:menu="@menu/menu_toolbar">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="매치"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="홈"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:text="내정보"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.tabs.TabLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
