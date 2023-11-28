@@ -6,4 +6,5 @@
     <string name="chk_person">몇대몇매치</string>
     <string name="match_day">( 날짜 시간 )매치</string>
     <string name="match_place">구장 위치</string>
+    <string name="create_match">매치 만들기</string>
 </resources>
