@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_chart"
-        android:icon="@drawable/main_logo_white"
+        android:icon="@drawable/main_logo_black"
         android:title="MENU1" />
 
     <item
         android:id="@+id/menu_search"
-        android:icon="@drawable/main_logo_white"
+        android:icon="@drawable/main_logo_black"
         android:title="MENU2" />
 
     <item
         android:id="@+id/menu_more"
-        android:icon="@drawable/main_logo_white"
-        android:title="MENU3"
-        app:showAsAction=""/>
+        android:icon="@drawable/main_logo_black"
+        android:title="MENU3" />
 </menu>
