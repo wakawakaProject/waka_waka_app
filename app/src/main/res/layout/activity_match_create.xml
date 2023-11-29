@@ -9,8 +9,10 @@
 
 
     <ScrollView
+        tools:ignore="SpeakableTextPresentCheck"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     </ScrollView>
 
@@ -95,6 +97,7 @@
                         android:fontFamily="@font/lineseedkr_bd"
                         android:text="@string/select_field"
                         android:textSize="12sp"
+                        android:textColor="@color/main_black"
                         app:layout_constraintTop_toBottomOf="@+id/cv_img" />
 
                     <androidx.cardview.widget.CardView
@@ -124,6 +127,7 @@
                         android:fontFamily="@font/lineseedkr_bd"
                         android:text="@string/select_date"
                         android:textSize="12sp"
+                        android:textColor="@color/main_black"
                         app:layout_constraintTop_toBottomOf="@+id/spn_select_field" />
 
                     <androidx.cardview.widget.CardView
@@ -153,6 +157,7 @@
                         android:fontFamily="@font/lineseedkr_bd"
                         android:text="@string/select_member"
                         android:textSize="12sp"
+                        android:textColor="@color/main_black"
                         app:layout_constraintTop_toBottomOf="@+id/spn_select_date" />
 
                     <androidx.cardview.widget.CardView
@@ -182,6 +187,7 @@
                         android:fontFamily="@font/lineseedkr_bd"
                         android:text="경기장을 선택해 주세요"
                         android:textSize="12sp"
+                        android:textColor="@color/main_black"
                         app:layout_constraintTop_toBottomOf="@+id/spn_select_member" />
 
                     <androidx.cardview.widget.CardView
@@ -199,23 +205,22 @@
                             android:layout_height="wrap_content"
                             android:background="@color/middle_light_grey"
                             android:hint="@string/comment_hint"
-                            android:textSize="12sp" />
+                            android:textSize="15sp"/>
                     </androidx.cardview.widget.CardView>
 
 
-                    <!--<Button
+                    <Button
                         android:id="@+id/btn_chk_lineup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginVertical="10dp"
                         android:background="@drawable/round_button"
-                        android:text="라인업 확인하기"
+                        android:text="@string/btn_create_match"
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/lineseedkr_bd"
-                        app:layout_constraintTop_toBottomOf="@+id/spn_select_field"/>
-                    -->
+                        app:layout_constraintTop_toBottomOf="@+id/tv_comment"/>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
