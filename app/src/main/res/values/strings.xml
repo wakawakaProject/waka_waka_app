@@ -7,4 +7,8 @@
     <string name="match_day">( 날짜 시간 )매치</string>
     <string name="match_place">구장 위치</string>
     <string name="create_match">매치 만들기</string>
+    <string name="select_field">경기장을 선택해 주세요</string>
+    <string name="select_date">날짜를 선택해 주세요</string>
+    <string name="select_member">경기 인원수를 선택해 주세요</string>
+    <string name="comment_hint">코멘트를 작성해주세요</string>
 </resources>
