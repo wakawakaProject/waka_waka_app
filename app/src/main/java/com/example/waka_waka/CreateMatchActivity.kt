@@ -7,10 +7,9 @@ import com.example.waka_waka.databinding.ActivityMatchCreateBinding
 
 class CreateMatchActivity : AppCompatActivity() {
 
+    val binding = ActivityMatchCreateBinding.inflate(layoutInflater)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val binding = ActivityMatchCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // spinner에 리스트 추가
@@ -21,8 +20,6 @@ class CreateMatchActivity : AppCompatActivity() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             binding.spnSelectField.adapter = adapter // spinner에 array 적용
-
         }
-
     }
 }
