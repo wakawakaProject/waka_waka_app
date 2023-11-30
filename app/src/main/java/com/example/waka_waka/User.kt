@@ -5,7 +5,7 @@ class User {
     var id: String = ""
     var pw: String = ""
     var name: String = ""
-    var age: String = ""
+    var age: Int = 0
     var phone: String = ""
     var gender: String = ""
     var position: String = ""
@@ -14,7 +14,7 @@ class User {
 
     constructor()
 
-    constructor(id:String, pw:String, name: String, age: String, phone: String,
+    constructor(id:String, pw:String, name: String, age: Int, phone: String,
                 gender: String, position: String, played_year : String, address : String){
         this.id = id
         this.name = name
