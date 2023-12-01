@@ -66,6 +66,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database-ktx'
     // firebase 라이브러리 충돌로 인해 주석처리
     //implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth-ktx") // firebase auth library
+    implementation("com.google.android.gms:play-services-auth:20.7.0") // google play service library
     implementation platform('androidx.compose:compose-bom:2022.10.00')
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-graphics'
