@@ -38,7 +38,7 @@ class SignUpActivity : AppCompatActivity() {
                     SignUpCareer.text.toString(),
                     SignUpAddress.text.toString()
                     )
-                addKey(user)
+                addDataKey(user)
 
                 if (binding.SignUpPWD.text.toString() == binding.SignUpPWDCheck.text.toString()) {
                     checkcomplete = true
@@ -48,6 +48,8 @@ class SignUpActivity : AppCompatActivity() {
                     binding.SignUpPWDCheck.text = null
                     checkcomplete = false
                 }
+                Toast.makeText(applicationContext, "회원가입 완료!", Toast.LENGTH_SHORT).show()
+
                 if (checkcomplete) {
                     startActivity(intent)
                 }
@@ -56,9 +58,11 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
-    fun addKey(user: User){
-        val id = myRef.push().key!!
-        user.id = id
-        myRef.child(id).setValue(user)
+    fun  addDataKey(user: User) : String{
+        val dataId = myRef.push().key!!
+        user.dataId = dataId;
+        myRef.child(dataId).setValue(user)
+
+        return dataId;
     }
 }

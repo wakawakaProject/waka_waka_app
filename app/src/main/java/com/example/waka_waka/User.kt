@@ -2,7 +2,8 @@ package com.example.waka_waka
 
 class User {
 
-    var id: String = ""
+    var dataId: String = ""
+    var userId : String = ""
     var pw: String = ""
     var name: String = ""
     var age: Int = 0
@@ -14,9 +15,9 @@ class User {
 
     constructor()
 
-    constructor(id:String, pw:String, name: String, age: Int, phone: String,
+    constructor(userId : String, pw:String, name: String, age: Int, phone: String,
                 gender: String, position: String, played_year : String, address : String){
-        this.id = id
+        this.userId = userId
         this.name = name
         this.pw = pw
         this. age = age
