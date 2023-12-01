@@ -111,6 +111,7 @@
                 android:layout_width="268dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
+                android:inputType="textPassword"
                 android:layout_marginTop="320dp"
                 android:background="@drawable/round_edittext"
                 android:textSize="20sp">
@@ -128,6 +129,7 @@
                 android:id="@+id/Sign_up_PWD_check"
                 android:layout_width="268dp"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="380dp"
                 android:background="@drawable/round_edittext"
@@ -206,8 +208,8 @@
 
             <Button
                 android:id="@+id/sign_up_complete"
-                android:layout_width="76dp"
-                android:layout_height="34dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="540dp"
                 android:background="@drawable/round_button"
