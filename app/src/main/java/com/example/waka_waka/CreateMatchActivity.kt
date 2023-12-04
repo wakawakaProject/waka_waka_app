@@ -15,7 +15,7 @@ class CreateMatchActivity : AppCompatActivity() {
         // spinner에 리스트 추가
         ArrayAdapter.createFromResource(
             this,
-            R.array.spn_arr, // values/array.xml에 있는 array리소스 인자로 넘기기
+            R.array.gender_arr, // values/array.xml에 있는 array리소스 인자로 넘기기
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)

@@ -2,8 +2,12 @@ package com.example.waka_waka
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.waka_waka.databinding.ActivityLoginBinding
 import com.example.waka_waka.databinding.ActivitySignUpBinding
 import com.google.firebase.Firebase
@@ -27,6 +31,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(view)
         val intent = Intent(this, LoginActivity::class.java)
 
+        var selectedItem = initSpinner(binding)
 
         with(binding){
             signUpComplete.setOnClickListener{
@@ -35,7 +40,7 @@ class SignUpActivity : AppCompatActivity() {
                     binding.SignUpName.text.toString(),
                     20,
                     binding.SignUpNumber.text.toString(),
-                    binding.SignUpSex.text.toString(),
+                    selectedItem,
                     binding.SignUpPosition.text.toString(),
                     binding.SignUpCareer.text.toString(),
                     binding.SignUpAddress.text.toString()
@@ -102,6 +107,29 @@ class SignUpActivity : AppCompatActivity() {
         userRef.child(id).setValue(user)
     }
 
+    private fun initSpinner(binding:ActivitySignUpBinding) : String {
+        var selectedItem : String = ""
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.gender_arr,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            binding.SignUpSex.adapter = adapter
+        }
 
+        binding.SignUpSex.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                    if (p0 != null) {
+                        selectedItem = p0.getItemAtPosition(p2).toString()
+                    }
+                }
 
+                override fun onNothingSelected(p0: AdapterView<*>?) {
+                    return
+                }
+            }
+        return selectedItem // 현재 null 값이 들어오는 상태 수정요망
+    }
 }

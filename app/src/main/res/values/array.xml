@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="spn_arr">
-        <item>item1</item>
-        <item>item1</item>
-        <item>item1</item>
-        <item>item1</item>
+    <array name="gender_arr">
+        <item>남</item>
+        <item>여</item>
     </array>
 </resources>

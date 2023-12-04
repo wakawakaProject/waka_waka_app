@@ -47,7 +47,7 @@
                 android:layout_marginTop="120dp"
                 android:background="@drawable/round_edittext"
                 android:textSize="20sp"
-                android:text="이름 입력">
+                android:hint="이름 입력">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -66,7 +66,7 @@
                 android:layout_marginTop="180dp"
                 android:background="@drawable/round_edittext"
                 android:textSize="20sp"
-                android:text="전화번호 입력">
+                android:hint="전화번호 입력">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
                 android:layout_marginTop="240dp"
                 android:background="@drawable/round_edittext"
                 android:textSize="20sp"
-                android:text="이메일 입력">
+                android:hint="이메일 입력">
             </EditText>
 
             <Button
@@ -118,7 +118,7 @@
                 android:layout_marginTop="320dp"
                 android:background="@drawable/round_edittext"
                 android:textSize="20sp"
-                android:text="1111111">
+                android:hint="비밀번호 입력">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -138,7 +138,7 @@
                 android:layout_marginTop="380dp"
                 android:background="@drawable/round_edittext"
                 android:textSize="20sp"
-                android:text="1111111">
+                android:hint="비밀번호 재입력">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -149,14 +149,14 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="420dp">
             </TextView>
-            <EditText
+            <Spinner
                 android:id="@+id/Sign_up_sex"
                 android:layout_width="43dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="440dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp"></EditText>
+                android:textSize="20sp"></Spinner>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
