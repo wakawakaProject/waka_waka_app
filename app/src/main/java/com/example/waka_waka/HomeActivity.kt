@@ -7,10 +7,10 @@ import com.example.waka_waka.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
-    val binding = ActivityHomeBinding.inflate(layoutInflater)
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
+        val binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
     }
