@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "755533939759",
+    "firebase_url": "https://wakawakaapp-92722-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wakawakaapp-92722",
+    "storage_bucket": "wakawakaapp-92722.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755533939759:android:74bc4bc6f227bfc43972da",
+        "android_client_info": {
+          "package_name": "com.example.waka_waka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755533939759-msu2nh9hcla4euaccq95c7e64lkbgkei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC98FetJQfjBtNYW9WnAkzbZMzep2jMrtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755533939759-msu2nh9hcla4euaccq95c7e64lkbgkei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

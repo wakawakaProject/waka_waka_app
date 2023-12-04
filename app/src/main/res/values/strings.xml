@@ -12,4 +12,5 @@
     <string name="select_member">경기 인원수를 선택해 주세요</string>
     <string name="comment_hint">코멘트를 작성해주세요</string>
     <string name="btn_create_match">매치 만들기</string>
+    <string name="web_client_id">755533939759-msu2nh9hcla4euaccq95c7e64lkbgkei.apps.googleusercontent.com</string>
 </resources>

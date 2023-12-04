@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/main_black"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:context=".CreateMatchActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -94,7 +94,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/cv_img" />
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/spn_select_field"
+                        android:id="@+id/cv_select_field"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
@@ -103,10 +103,11 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_select_field">
 
                         <Spinner
+                            android:id="@+id/spn_select_field"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="50dp"
                             android:background="@color/light_grey"
-                            android:spinnerMode="dropdown" />
+                            android:spinnerMode="dropdown"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -121,10 +122,10 @@
                         android:text="@string/select_date"
                         android:textSize="12sp"
                         android:textColor="@color/main_black"
-                        app:layout_constraintTop_toBottomOf="@+id/spn_select_field" />
+                        app:layout_constraintTop_toBottomOf="@+id/cv_select_field" />
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/spn_select_date"
+                        android:id="@+id/cv_select_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
@@ -133,8 +134,9 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_select_date">
 
                         <Spinner
+                            android:id="@+id/spn_select_date"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="50dp"
                             android:background="@color/light_grey"
                             android:spinnerMode="dropdown" />
 
@@ -151,10 +153,10 @@
                         android:text="@string/select_member"
                         android:textSize="12sp"
                         android:textColor="@color/main_black"
-                        app:layout_constraintTop_toBottomOf="@+id/spn_select_date" />
+                        app:layout_constraintTop_toBottomOf="@+id/cv_select_date" />
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/spn_select_member"
+                        android:id="@+id/cv_select_member"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
@@ -163,8 +165,9 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_select_member">
 
                         <Spinner
+                            android:id="@+id/spn_select_member"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="50dp"
                             android:background="@color/light_grey"
                             android:spinnerMode="dropdown" />
 
@@ -181,9 +184,9 @@
                         android:text="경기장을 선택해 주세요"
                         android:textSize="12sp"
                         android:textColor="@color/main_black"
-                        app:layout_constraintTop_toBottomOf="@+id/spn_select_member" />
+                        app:layout_constraintTop_toBottomOf="@+id/cv_select_member" />
 
-                    <androidx.cardview.widget.CardView
+                    <!--<androidx.cardview.widget.CardView
                         android:id="@+id/tv_comment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -198,8 +201,9 @@
                             android:layout_height="wrap_content"
                             android:background="@color/middle_light_grey"
                             android:hint="@string/comment_hint"
-                            android:textSize="15sp"/>
-                    </androidx.cardview.widget.CardView>
+                            android:textSize="20sp"/>
+
+                    </androidx.cardview.widget.CardView>-->
 
 
                     <Button
@@ -213,7 +217,7 @@
                         android:textSize="18sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/lineseedkr_bd"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_comment"/>
+                        app:layout_constraintTop_toBottomOf="@+id/tv_comment_title"/>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

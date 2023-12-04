@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="gender_arr">
+        <item>남</item>
+        <item>여</item>
+    </array>
 </resources>
