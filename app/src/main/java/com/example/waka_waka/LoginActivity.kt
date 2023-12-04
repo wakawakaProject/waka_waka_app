@@ -1,25 +1,12 @@
 package com.example.waka_waka
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.waka_waka.databinding.ActivityLoginBinding
-import com.example.waka_waka.databinding.ActivitySignUpBinding
-import com.google.android.gms.auth.api.Auth
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.material.tabs.TabLayout
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.auth
-import com.google.firebase.database.database
 
 public class LoginActivity : AppCompatActivity() {
 
@@ -115,7 +102,11 @@ public class LoginActivity : AppCompatActivity() {
 
     private fun moveHomeActivity(user: FirebaseUser?){
         if(user!=null){
-            startActivity(Intent(this, HomeActivity::class.java))
+            val homeIntent = Intent(this, HomeActivity::class.java)
+            val user = auth.currentUser
+
+            homeIntent.putExtra("currentUser", user)
+            startActivity(homeIntent)
         }
     }
 }
