@@ -46,7 +46,8 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="120dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                android:text="이름 입력">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="180dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                android:text="전화번호 입력">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -82,7 +84,8 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="240dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                android:text="아이디 입력">
             </EditText>
 
             <Button
@@ -114,7 +117,8 @@
                 android:inputType="textPassword"
                 android:layout_marginTop="320dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                android:text="1111111">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -133,7 +137,8 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="380dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                android:text="1111111">
             </EditText>
             <TextView
                 android:layout_width="wrap_content"
@@ -203,7 +208,8 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="500dp"
                 android:background="@drawable/round_edittext"
-                android:textSize="20sp">
+                android:textSize="20sp"
+                android:text="주소 입력">
             </EditText>
 
             <Button
