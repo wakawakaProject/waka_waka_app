@@ -6,13 +6,17 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.waka_waka.databinding.ActivitySignUpBinding
 import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 import com.google.firebase.database.database
+import kotlin.math.sign
 
 
 class SignUpActivity : AppCompatActivity() {
     var checkcomplete : Boolean = true
     val database = Firebase.database
     val myRef = database.getReference("user")
+    val auth = FirebaseAuth.getInstance()
     override fun onCreate(saveInstanceState: Bundle?){
         super.onCreate(saveInstanceState)
 
@@ -22,23 +26,9 @@ class SignUpActivity : AppCompatActivity() {
         val intent = Intent(this, LoginActivity::class.java)
 
 
-//
-//        constructor(id:String, pw:String, name: String, age: String, phone: String,
-//            gender: String, position: String, played_year : String, address : String){
         with(binding){
             signUpComplete.setOnClickListener{
-                val user = User(
-                    SignUpID.text.toString(),
-                    SignUpPWD.text.toString(),
-                    SignUpName.text.toString(),
-                    20, // 나이를 입력받는 디자인 미완성으로 인해 더미데이터 입력
-                    SignUpNumber.text.toString(),
-                    SignUpSex.text.toString(),
-                    SignUpPosition.text.toString(),
-                    SignUpCareer.text.toString(),
-                    SignUpAddress.text.toString()
-                    )
-                addDataKey(user)
+
 
                 if (binding.SignUpPWD.text.toString() == binding.SignUpPWDCheck.text.toString()) {
                     checkcomplete = true
@@ -48,6 +38,8 @@ class SignUpActivity : AppCompatActivity() {
                     binding.SignUpPWDCheck.text = null
                     checkcomplete = false
                 }
+
+
                 Toast.makeText(applicationContext, "회원가입 완료!", Toast.LENGTH_SHORT).show()
 
                 if (checkcomplete) {
@@ -56,13 +48,20 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+
+
+
     }
 
-    fun  addDataKey(user: User) : String{
-        val dataId = myRef.push().key!!
-        user.dataId = dataId;
-        myRef.child(dataId).setValue(user)
+//    fun  addDataKey(user: User) : String{
+//        val dataId = myRef.push().key!!
+//        user.dataId = dataId;
+//        myRef.child(dataId).setValue(user)
+//
+//        return dataId;
+//    }
 
-        return dataId;
-    }
+
+
+
 }
