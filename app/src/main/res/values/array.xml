@@ -4,4 +4,14 @@
         <item>남</item>
         <item>여</item>
     </array>
+    <array name="member_num">
+        <item>5VS5</item>
+        <item>6VS6</item>
+    </array>
+    <array name="stardium">
+        <item>시흥HM풋살파크</item>
+        <item>시흥HM풋살파크2</item>
+        <item>시흥HM풋살파크3</item>
+        <item>시흥HM풋살파크4</item>
+    </array>
 </resources>
