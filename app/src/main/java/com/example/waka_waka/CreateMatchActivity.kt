@@ -1,6 +1,7 @@
 package com.example.waka_waka
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.TextView
@@ -62,6 +63,8 @@ class CreateMatchActivity : AppCompatActivity() {
             )
 
             matchRef.child(dataId).setValue(match)
+            val intent = Intent(applicationContext, MatchListActivity::class.java)
+            startActivity(intent)
         }
 
     }
