@@ -14,4 +14,5 @@
     <string name="btn_create_match">매치 만들기</string>
     <string name="web_client_id">755533939759-msu2nh9hcla4euaccq95c7e64lkbgkei.apps.googleusercontent.com</string>
     <string name="str_comment">작성하고 싶은 코멘트</string>
+    <string name="pickDate">날짜 선택</string>
 </resources>
