@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.matchMaking.setOnClickListener {
-            val intent = Intent(applicationContext, MatchListActivity::class.java)
+            val intent = Intent(applicationContext, CreateMatchActivity::class.java)
             startActivity(intent)
         }
     }
