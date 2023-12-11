@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="536dp"
+            android:fontFamily="@font/lineseedkr_bd"
+            android:text="매치"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/bigcardview"
+            app:layout_constraintStart_toStartOf="@id/bigcardview" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bigcardview"
+            android:layout_width="366dp"
+            android:layout_height="539dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.516" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_match_ended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="124dp"
+                    android:layout_marginBottom="496dp"
+                    android:fontFamily="@font/lineseedkr_bd"
+                    android:text="매치 종료"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_img"
+                    android:layout_width="340dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="18dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_match_ended"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="50dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ground_example" />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_match_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:textSize="22sp"
+                    android:text="12월 23일 (토) 오후 9시 매치"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/lineseedkr_bd"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_img"/>
+
+                <TextView
+                    android:id="@+id/tv_match_addrs"
+                    android:fontFamily="@font/lineseedkr_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="5dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="경기도 시흥시 정왕동 HM풋살파크 C구장"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_match_title"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="316dp"
+                    android:layout_height="257dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/outline_cv"
+                    app:layout_constraintEnd_toEndOf="@id/tv_match_addrs"
+                    app:layout_constraintTop_toBottomOf="@id/tv_match_addrs" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@+id/include"
+        layout="@layout/bottom_navigation_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
