@@ -109,47 +109,63 @@
                         android:text="안녕하세요! 12월 24일 경기예정입니다. 많은 관심 부탁드려요!!"
                         app:layout_constraintTop_toBottomOf="@+id/tv_match_addrs"/>
 
-                    <Button
-                        android:id="@+id/btn_join_match"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/btn_ctl"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
                         android:layout_marginHorizontal="20dp"
-                        android:layout_marginVertical="10dp"
-                        android:background="@drawable/round_button"
-                        android:text="매치 참여하기 7/12"
-                        android:textSize="18sp"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/lineseedkr_bd"
-                        app:layout_constraintTop_toBottomOf="@id/tv_match_info"/>
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_match_info">
 
-                    <Button
-                        android:id="@+id/btn_chk_lineup"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="20dp"
-                        android:layout_marginVertical="10dp"
-                        android:background="@drawable/round_button"
-                        android:text="라인업 확인하기"
-                        android:textSize="18sp"
-                        android:textColor="@color/white"
-                        android:fontFamily="@font/lineseedkr_bd"
-                        app:layout_constraintTop_toBottomOf="@id/btn_join_match"/>
-                    
+                        <Button
+                            android:id="@+id/btn_join_match"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/round_button"
+                            android:text="매치 참여하기 7/12"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/lineseedkr_bd"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/btn_chk_lineup"/>
+
+                        <Button
+                            android:id="@+id/btn_chk_lineup"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/round_button"
+                            android:text="라인업 확인하기"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/lineseedkr_bd"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/btn_join_match"
+                            app:layout_constraintRight_toRightOf="parent"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
                     <TextView
                         android:id="@+id/tv_addrs"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="10dp"
                         android:layout_marginHorizontal="20dp"
-                        app:layout_constraintTop_toBottomOf="@id/btn_chk_lineup"
+                        app:layout_constraintTop_toBottomOf="@id/btn_ctl"
                         android:textSize="11sp"
                         android:text="경기도 시흥시 정왕동 HM풋살파크 C구장"/>
 
                     <ImageView
                         android:layout_marginHorizontal="20dp"
                         android:layout_width="match_parent"
-                        android:layout_height="130dp"
+                        android:layout_height="160dp"
                         android:scaleType="centerCrop"
+                        android:background="@drawable/round_button_grey"
                         android:src="@drawable/map_example"
                         app:layout_constraintTop_toBottomOf="@+id/tv_addrs"
                         app:layout_constraintBottom_toBottomOf="parent"/>

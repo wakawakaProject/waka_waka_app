@@ -15,4 +15,7 @@
     <string name="web_client_id">755533939759-msu2nh9hcla4euaccq95c7e64lkbgkei.apps.googleusercontent.com</string>
     <string name="str_comment">작성하고 싶은 코멘트</string>
     <string name="pickDate">날짜 선택</string>
+    <string name="profile">내정보</string>
+    <string name="home">홈</string>
+    <string name="match">매치</string>
 </resources>
