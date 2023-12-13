@@ -15,17 +15,20 @@
         app:tabTextColor="@color/white">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_match"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="매치"/>
+            android:text="@string/match"/>
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_home"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="홈"/>
+            android:text="@string/home"/>
 
         <com.google.android.material.tabs.TabItem
-            android:text="내정보"
+            android:id="@+id/ti_profile"
+            android:text="@string/profile"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
     </com.google.android.material.tabs.TabLayout>
