@@ -18,19 +18,20 @@
             android:id="@+id/ti_match"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/match"/>
+            android:icon="@drawable/match_logo"
+            />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/ti_home"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/home"/>
+            android:icon="@drawable/home_logo"/>
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/ti_profile"
-            android:text="@string/profile"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:icon="@drawable/profile_logo"/>
     </com.google.android.material.tabs.TabLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
