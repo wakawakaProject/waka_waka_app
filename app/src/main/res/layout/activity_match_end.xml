@@ -144,7 +144,60 @@
                         app:starPadding="8dp"
                         app:stepSize="0.1" />
 
+                    <Button
+                        android:id="@+id/myButton1"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="80sp"
+                        android:text="친절하고 메너가 좋아요!"></Button>
 
+                    <TextView
+                        android:id="@+id/myTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myButton1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="270sp"
+                        android:layout_marginTop="90sp"
+                        android:text="0" />
+                    <Button
+                        android:id="@+id/myButton2"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="130sp"
+                        android:text="실력이 뛰어나요!"></Button>
+
+                    <TextView
+                        android:id="@+id/myTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myButton2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="270sp"
+                        android:layout_marginTop="140sp"
+                        android:text="0" />
+                    <Button
+                        android:id="@+id/myButton3"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="180sp"
+                        android:text="규칙 및 시간 엄수를 잘해요!"></Button>
+
+                    <TextView
+                        android:id="@+id/myTextView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myButton3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="270sp"
+                        android:layout_marginTop="190sp"
+                        android:text="0" />
                 </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
