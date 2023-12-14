@@ -124,14 +124,14 @@ class SignUpActivity : AppCompatActivity() {
             object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     if (p0 != null) {
-                        selectedItem = p0.getItemAtPosition(p2).toString()
+                         selectedItem = p0.getItemAtPosition(p2).toString()
                     }
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
-                    return
+                    Toast.makeText(applicationContext, "성별을 다시 선택해주세요", Toast.LENGTH_SHORT).show()
                 }
             }
-        return selectedItem // 현재 null 값이 들어오는 상태 수정요망
+        return selectedItem// 현재 null 값이 들어오는 상태 수정요망
     }
 }
