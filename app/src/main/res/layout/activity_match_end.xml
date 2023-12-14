@@ -94,13 +94,58 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_match_title"/>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="316dp"
-                    android:layout_height="257dp"
+                    android:id="@+id/cardView"
+                    android:layout_width="324dp"
+                    android:layout_height="265dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/outline_cv"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardMaxElevation="6dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardStrokeColor="@color/black"
+                    app:cardStrokeWidth="2dp"
+                    app:cardUseCompatPadding="true"
                     app:layout_constraintEnd_toEndOf="@id/tv_match_addrs"
-                    app:layout_constraintTop_toBottomOf="@id/tv_match_addrs" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_match_addrs" >
+
+                    <TextView
+                        android:layout_marginTop="20sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이름"
+                        android:textColor="@color/black"
+                        android:textSize="8sp"></TextView>
+
+                    <Spinner
+                        android:id="@+id/name_choose"
+                        android:layout_width="97sp"
+                        android:layout_height="37sp"
+                        android:layout_marginTop="30sp"
+                        android:layout_marginLeft="20sp"
+                        android:background="@color/light_grey"
+                        android:spinnerMode="dropdown" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/materialRatingBar"
+                        android:layout_width="169dp"
+                        android:layout_height="31dp"
+                        android:layout_marginLeft="130sp"
+                        android:layout_marginTop="30sp"
+                        app:indeterminateTint="@color/indeterminate"
+                        app:isIndicator="false"
+                        app:numStars="5"
+                        app:progressDrawableCompat="@drawable/material_rating_bar_progress"
+                        app:progressTint="@color/progress"
+                        app:rating="0"
+                        app:secondaryProgressTint="@color/secondaryProgress"
+                        app:starPadding="8dp"
+                        app:stepSize="0.1" />
+
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
