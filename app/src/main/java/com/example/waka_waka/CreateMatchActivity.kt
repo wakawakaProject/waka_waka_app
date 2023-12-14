@@ -52,10 +52,12 @@ class CreateMatchActivity : AppCompatActivity() {
             binding.spnSelectMember.adapter = adapter // spinner에 array 적용
         }
 
+
+        // 매치 생성 버튼클릭
         binding.btnMakeMatch.setOnClickListener {
-            var dataId : String = ""
+            var dataId : String = addKey()
             var match = Match(
-                dataId = addKey(),
+                dataId,
                 binding.spnSelectField.selectedItem.toString(),
                 selectedDate,
                 binding.spnSelectMember.selectedItem.toString(),
@@ -79,26 +81,26 @@ class CreateMatchActivity : AppCompatActivity() {
             { _, year, month, dayOfMonth ->
                 // 날짜 선택 후 호출되는 콜백
                 selectedDate = updateDate(year, month, dayOfMonth, binding) // 날짜 데이터가 null값이 들어감 추후 확인요망
+                println(selectedDate)
             },
             calendar.get(Calendar.YEAR),
             calendar.get(Calendar.MONTH),
             calendar.get(Calendar.DAY_OF_MONTH)
         )
-
+        println(selectedDate)
         datePickerDialog.show()
         return selectedDate
     }
 
-    private fun updateDate(year: Int, month: Int, dayOfMonth: Int, binding: ActivityMatchCreateBinding) : String {
-        // 선택한 날짜를 TextView에 표시
-        val selectedDate : String = "${year.toString()}-${month.toString()}-${dayOfMonth.toString()}"
-        binding.dpSelectDate.text = selectedDate
-        return selectedDate
-    }
+        private fun updateDate(year: Int, month: Int, dayOfMonth: Int, binding: ActivityMatchCreateBinding) : String {
+            // 선택한 날짜를 TextView에 표시
+            val selectedDate : String = "${year.toString()}-${month.toString()}-${dayOfMonth.toString()}"
+            binding.dpSelectDate.text = selectedDate
+            return selectedDate
+        }
 
-    private fun addKey() : String{
-        val id = matchRef.push().key!!
-
+        private fun addKey() : String{
+            val id = matchRef.push().key!!
         return id
     }
 }

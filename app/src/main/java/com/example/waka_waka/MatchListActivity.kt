@@ -25,7 +25,7 @@ import com.google.firebase.database.database
 class MatchListActivity : AppCompatActivity() {
     private lateinit var scrl : ScrollView
     private lateinit var ctl : ConstraintLayout
-    private var dbRef = Firebase.database.getReference("user")
+    private var dbRef = Firebase.database.getReference("match")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
