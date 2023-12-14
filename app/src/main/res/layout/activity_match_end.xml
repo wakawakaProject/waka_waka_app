@@ -111,7 +111,7 @@
                     app:layout_constraintTop_toBottomOf="@id/tv_match_addrs" >
 
                     <TextView
-                        android:layout_marginTop="20sp"
+                        android:layout_marginTop="10sp"
                         android:layout_marginLeft="20sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                         android:id="@+id/name_choose"
                         android:layout_width="97sp"
                         android:layout_height="48sp"
-                        android:layout_marginTop="30sp"
+                        android:layout_marginTop="20sp"
                         android:layout_marginLeft="20sp"
                         android:background="@color/light_grey"
                         android:spinnerMode="dropdown" />
@@ -133,7 +133,7 @@
                         android:layout_width="169dp"
                         android:layout_height="31dp"
                         android:layout_marginLeft="130sp"
-                        android:layout_marginTop="30sp"
+                        android:layout_marginTop="20sp"
                         app:indeterminateTint="@color/indeterminate"
                         app:isIndicator="false"
                         app:numStars="5"
@@ -150,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="80sp"
+                        android:layout_marginTop="70sp"
                         android:text="친절하고 메너가 좋아요!"></Button>
 
                     <TextView
@@ -160,7 +160,7 @@
                         android:layout_below="@id/myButton1"
                         android:layout_centerHorizontal="true"
                         android:layout_marginLeft="270sp"
-                        android:layout_marginTop="90sp"
+                        android:layout_marginTop="80sp"
                         android:text="0" />
                     <Button
                         android:id="@+id/myButton2"
@@ -168,7 +168,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="130sp"
+                        android:layout_marginTop="120sp"
                         android:text="실력이 뛰어나요!"></Button>
 
                     <TextView
@@ -178,7 +178,7 @@
                         android:layout_below="@id/myButton2"
                         android:layout_centerHorizontal="true"
                         android:layout_marginLeft="270sp"
-                        android:layout_marginTop="140sp"
+                        android:layout_marginTop="130sp"
                         android:text="0" />
                     <Button
                         android:id="@+id/myButton3"
@@ -186,7 +186,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="20sp"
-                        android:layout_marginTop="180sp"
+                        android:layout_marginTop="170sp"
                         android:text="규칙 및 시간 엄수를 잘해요!"></Button>
 
                     <TextView
@@ -196,9 +196,19 @@
                         android:layout_below="@id/myButton3"
                         android:layout_centerHorizontal="true"
                         android:layout_marginLeft="270sp"
-                        android:layout_marginTop="190sp"
+                        android:layout_marginTop="180sp"
                         android:text="0" />
                 </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:background="@drawable/round_button"
+                    android:text="후기 입력"
+                    android:textColor="@color/white"
+                    tools:layout_editor_absoluteX="133dp"
+                    tools:layout_editor_absoluteY="514dp"></Button>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
