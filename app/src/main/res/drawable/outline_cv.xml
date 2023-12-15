@@ -10,7 +10,6 @@
             <stroke
                 android:width="10sp"
                 android:color="@color/black"/>
-
             <solid android:color="@color/white" />
         </shape>
     </item>

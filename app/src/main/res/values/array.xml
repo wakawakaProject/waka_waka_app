@@ -14,4 +14,13 @@
         <item>시흥HM풋살파크3</item>
         <item>시흥HM풋살파크4</item>
     </array>
+
+    <string-array name="name_to_review">
+        <item>이름0</item>
+        <item>이름1</item>
+        <item>이름2</item>
+        <item>이름3</item>
+        <item>이름4</item>
+    </string-array>
+
 </resources>
