@@ -35,7 +35,9 @@ class SignUpActivity : AppCompatActivity() {
 
         with(binding){
             signUpComplete.setOnClickListener{
+                var id : String = addKey()
                 var user:User = User(
+                    id,  // firebase DB에 키 값 생성
                     binding.SignUpEmail.text.toString(),
                     binding.SignUpName.text.toString(),
                     20,
@@ -45,7 +47,8 @@ class SignUpActivity : AppCompatActivity() {
                     binding.SignUpCareer.text.toString(),
                     binding.SignUpAddress.text.toString()
                 )
-                addKey(user) // firebase DB에 키 값 생성과 함께 저장
+
+                userRef.child(id).setValue(user)
                 signUp(binding, intent) // firebase auth에 email과 pw로 계정 생성
 
                 if (binding.SignUpPWD.text.toString() == binding.SignUpPWDCheck.text.toString()) {
@@ -101,10 +104,9 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
         }
     }
-    private fun addKey(user:User){
+    private fun addKey() : String{
         val id = userRef.push().key!!
-        user.dataId = id
-        userRef.child(id).setValue(user)
+        return id
     }
 
     private fun initSpinner(binding:ActivitySignUpBinding) : String {
@@ -122,14 +124,14 @@ class SignUpActivity : AppCompatActivity() {
             object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     if (p0 != null) {
-                        selectedItem = p0.getItemAtPosition(p2).toString()
+                         selectedItem = p0.getItemAtPosition(p2).toString()
                     }
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
-                    return
+                    Toast.makeText(applicationContext, "성별을 다시 선택해주세요", Toast.LENGTH_SHORT).show()
                 }
             }
-        return selectedItem // 현재 null 값이 들어오는 상태 수정요망
+        return selectedItem// 현재 null 값이 들어오는 상태 수정요망
     }
 }

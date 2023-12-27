@@ -5,65 +5,29 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/main_black"
+    tools:context=".HomeActivity">
 
     <ImageView
-        android:layout_width="187dp"
+        android:id="@+id/main_logo"
+        android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:layout_marginStart="112dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/main_logo_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008"></ImageView>
-
-    <Button
-        android:id="@+id/match_making"
-        android:layout_width="343dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/round_button"
-        android:fontFamily="@font/lineseedkr_bd"
-        android:text="매치 만들기"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424"></Button>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="343dp"
-        android:layout_height="134dp"
-        android:layout_marginStart="32dp"
-        app:cardBackgroundColor="@color/card_navy"
-        app:cardCornerRadius="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.653">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="55dp"
-            android:fontFamily="@font/lineseedkr_bd"
-            android:text="매치 전적 및 현재 상태"
-            android:textColor="@color/white"
-            android:textSize="24sp"></TextView>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="343dp"
         android:layout_height="161dp"
+        android:layout_marginBottom="15dp"
         app:cardBackgroundColor="@color/card_navy"
         app:cardCornerRadius="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166"
-        tools:layout_editor_absoluteX="34dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo">
 
         <TextView
             android:layout_width="wrap_content"
@@ -104,17 +68,54 @@
 
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/match_making"
+        android:layout_width="343dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/lineseedkr_bd"
+        android:text="매치 만들기"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/match_status"
+        android:layout_width="343dp"
+        android:layout_height="200dp"
+        android:layout_marginVertical="15dp"
+        app:cardBackgroundColor="@color/card_navy"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_making">
+
+        <TextView
+            android:id="@+id/tv_match_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="64dp"
+            android:layout_marginVertical="80dp"
+            android:fontFamily="@font/lineseedkr_bd"
+            android:text="매치 전적 및 현재 상태"
+            android:textColor="@color/white"
+            android:textSize="24sp"></TextView>
+    </androidx.cardview.widget.CardView>
+
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="343dp"
         android:layout_height="150dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/card_navy"
         app:cardCornerRadius="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/match_status">
 
         <TextView
             android:layout_width="wrap_content"
@@ -183,6 +184,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"></ImageView>
         </androidx.cardview.widget.CardView>
-
     </androidx.cardview.widget.CardView>
+
+
+    <include layout="@layout/bottom_navigation_view"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
